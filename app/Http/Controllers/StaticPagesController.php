@@ -10,17 +10,23 @@ use App\Http\Controllers\Controller;
 class StaticPagesController extends Controller
 {
     public function home()
-        {
-            return view('static_pages/home');
+    {
+        $feed_items = [];
+        if (Auth::check()) {
+            $feed_items = Auth::user()->feed()->paginate(30);
         }
 
-        public function help()
-        {
-            return view('static_pages/help');
-        }
+        return view('static_pages/home', compact('feed_items'));
+    }
 
-        public function about()
-        {
-            return view('static_pages/about');
-        }
+    public function help()
+    {
+        return view('static_pages/help');
+    }
+
+    public function about()
+    {
+        return view('static_pages/about');
+    }
+
 }
