@@ -1,5 +1,3 @@
-config/database.php
-
 <?php
 
 $db_config = get_db_config();
