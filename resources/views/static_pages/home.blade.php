@@ -7,7 +7,7 @@
         <section class="status_form">
           @include('shared.status_form')
         </section>
-        <h3>微博列表</h3>
+        <h3>最近发表</h3>
         @include('shared.feed')
       </div>
       <aside class="col-md-4">
