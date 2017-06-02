@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Status;
+use Auth;
+
+
 class StaticPagesController extends Controller
 {
     public function home()
